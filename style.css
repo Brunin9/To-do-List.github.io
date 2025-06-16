@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    width: 900px; /* agora 900px, bem largo */
+    border-radius: 16px;
+    padding: 30px 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  
+  .input-area {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 12px;
+  }
+  
+  #taskInput {
+    flex: 1 1 100%;
+    padding: 16px 24px;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 2px 2px 5px #f0f0f0,
+                inset -2px -2px 5px #ffffff;
+  }
+  
+  #taskInput:focus {
+    border-color: #5c9ded;
+    box-shadow: 0 0 10px 3px rgba(92, 157, 237, 0.6);
+  }
+  
+  #addBtn {
+    padding: 0 30px;
+    background: #5c9ded;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(92, 157, 237, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #addBtn:hover {
+    background: #3b78d8;
+    box-shadow: 0 12px 20px rgba(59, 120, 216, 0.5);
+  }
+  
+  #taskList {
+    list-style: none;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 6px;
+  }
+  
+  #taskList::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  #taskList::-webkit-scrollbar-thumb {
+    background-color: #5c9ded;
+    border-radius: 10px;
+  }
+  
+  #taskList li {
+    background: #f0f4ff;
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #2c3e50;
+    box-shadow: 4px 4px 9px #dbe4ff, -4px -4px 9px #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  #taskList li:hover {
+    background-color: #dbe4ff;
+  }
+  
+  .delete-btn {
+    background: #ff6b6b;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 7px 12px rgba(255, 107, 107, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e24343;
+    box-shadow: 0 10px 18px rgba(226, 67, 67, 0.6);
+  }
+  
